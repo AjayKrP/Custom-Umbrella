@@ -6,3 +6,7 @@
 > python3 -m http.server 3000
 
 - then open http://localhost:3000/ to use application
+
+Application Landing Page
+
+![Application Landing Page](img/landing_page.png)
