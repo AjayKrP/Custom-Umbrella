@@ -12,10 +12,10 @@ const MAX_FILE_UPLOAD_SIZE = 5*1024*1024;
  * input => image object (this)
  * @param input
  */
-function readURL(input) {
+function uploadImage(input) {
   const label = $('[data-js-label]');
   if (input.files && input.files[0]) {
-    console.log(input.files[0])
+    console.log(input.files[0]);
     if (input.files[0].size < MAX_FILE_UPLOAD_SIZE) {
       if (input.files[0].type === 'image/jpeg' || input.files[0].type === 'image/png') {
         label.text(input.files[0].name)
@@ -80,6 +80,6 @@ $(document).ready(function () {
    * If select logo images
    */
   $('input[type=file]').change(function () {
-    readURL(this);
+    uploadImage(this);
   });
 })
